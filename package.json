@@ -1,0 +1,19 @@
+{
+  "name": "awsan-communication",
+  "version": "6.0.0",
+  "description": "Awsan Communication Global Hub - 6G Advanced Security Edition",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["6g", "dns", "ipv6", "awsan", "yemen"],
+  "author": "Eng. Awsan Adel Abdulbari Ahmed Sultan (ID: 01010305468, Yemen)",
+  "license": "Proprietary",
+  "private": true,
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
