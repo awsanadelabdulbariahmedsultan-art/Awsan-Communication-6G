@@ -1,1 +1,8 @@
-.
+المراقب الذكي يعمل الآن... أي تغيير سيتم رفعه لـ GitHub تلقائياً.
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+./ MODIFY nohup.out
+[main d1ca06d] Auto-Update: 2026-04-19 22:39:53 (Eng. Awsan Continuous Sync)
+ 2 files changed, 16 insertions(+)
+ create mode 100755 auto_sync.sh
+ create mode 100644 nohup.out
