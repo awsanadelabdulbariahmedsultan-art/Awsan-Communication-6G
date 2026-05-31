@@ -1,29 +1,17 @@
 {
   "name": "awsan-communication",
   "version": "6.0.0",
-  "description": "Awsan Communication Global Hub - 6G Advanced Security Edition with AI-Optimized Zero-Latency DNS Tracking",
+  "description": "Awsan Communication Global Hub - 6G Advanced Security Edition",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
-  "keywords": [
-    "6g",
-    "dns-resolver",
-    "ipv6",
-    "post-quantum-security",
-    "ultra-low-latency",
-    "awsan-hub",
-    "yemen"
-  ],
-  "author": "Eng. Awsan Adel Abdulbari Ahmed Sultan (ID: 01010305468, Yemen, Tel: 00967777852433)",
+  "keywords": ["6g", "dns", "ipv6", "awsan", "yemen"],
+  "author": "Eng. Awsan Adel Abdulbari Ahmed Sultan (ID: 01010305468, Yemen)",
   "license": "Proprietary",
   "private": true,
   "dependencies": {
     "express": "^5.2.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.0"
   },
   "engines": {
     "node": ">=18.0.0"
