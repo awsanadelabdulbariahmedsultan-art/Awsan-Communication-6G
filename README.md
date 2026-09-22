@@ -82,9 +82,8 @@ The central application server (`server.js`) exposes real-time endpoints on port
 ```text
 Awsan-Communication-6G/
 │
-├── .github/
-│   └── workflows/
-│       └── ci.yml                          # Continuous Integration & Automated Tests
+├── workflows/
+│   └── ci.yml                              # Continuous Integration & Automated Tests
 │
 ├── core-ntn/                               # 6G Non-Terrestrial Network Logic & Physics
 │   ├── link_budget.js                      # Link Budget & Path Loss Equations
