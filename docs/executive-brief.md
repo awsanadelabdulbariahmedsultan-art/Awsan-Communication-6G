@@ -2,7 +2,7 @@
 
 **Lead Systems Architect:** Eng. Awsan Adel Abdulbari Ahmed Sultan  
 **Location:** Yemen | **National ID:** 01010305468 | **Phone:** +967 777852433  
-**LinkedIn Profile:** [Eng. Awsan Adel Sultan](https://www.linkedin.com/in/awsan-adel-abdulbari-ahmed-sultan-8aa5a1a9)  
+**LinkedIn Profile:** [Eng. Awsan Adel Abdulbari Ahmed Sultan](https://www.linkedin.com/in/awsan-adel-abdulbari-ahmed-sultan-8aa5a1a9)  
 **Project Repository:** [Awsan-Communication-6G](https://github.com/awsanadelabdulbariahmedsultan-art/Awsan-Communication-6G)  
 **System Domain:** `awsandew.world.com`  
 
@@ -54,7 +54,7 @@ An integrated simulation and intelligent orchestration framework aligned with 3G
 
 **كبير مهندسي النظم:** م. أوسان عادل عبدالباري أحمد سلطان  
 **الموقع:** الجمهورية اليمنية | **الرقم القومي:** 01010305468 | **الهاتف:** 967777852433+  
-**الملف المهني (LinkedIn):** [حساب م. أوسان عادل سلطان](https://www.linkedin.com/in/awsan-adel-abdulbari-ahmed-sultan-8aa5a1a9)  
+**الملف المهني (LinkedIn):** [حساب م. أوسان عادل عبدالباري أحمد سلطان](https://www.linkedin.com/in/awsan-adel-abdulbari-ahmed-sultan-8aa5a1a9)  
 **مستودع المشروع على GitHub:** [Awsan-Communication-6G](https://github.com/awsanadelabdulbariahmedsultan-art/Awsan-Communication-6G)  
 **نطاق المنظومة:** `awsandew.world.com`  
 
