@@ -1,7 +1,16 @@
-/**
- * Link Budget Calculator for 6G Non-Terrestrial Networks (NTN)
- * Direct-to-Device (D2D) Satellite Link Analysis
- */
+/* =========================================================================
+   INTELLECTUAL PROPERTY & COPYRIGHT NOTICE
+   =========================================================================
+   Project Name: Awsan Communication Global Hub (6G NTN Edition)
+   Module      : Link Budget & Physical Radio Propagation Analysis
+   Edition     : Complete Experimental Edition (إصدار تجريبي مكتمل)
+   Author/Owner: Eng. Awsan Adel Abdulbari Ahmed Sultan
+   Location    : Yemen
+   National ID : 01010305468
+   Contact Tel : +967 777852433
+   
+   Copyright (c) 2026 Eng. Awsan Adel Sultan. All Rights Reserved.
+   ========================================================================= */
 
 const SPEED_OF_LIGHT = 299792458; // m/s
 const BOLTZMANN_CONSTANT = 1.380649e-23; // J/K
