@@ -13,6 +13,14 @@
 
 # Awsan Communication Global Hub (6G Advanced Security & NTN Edition)
 
+---
+
+<p align="center">
+  <img src="./AWSAN COMMUNICATION 6G.png" alt="AWSAN COMMUNICATION 6G" width="1254" height="1254"/>
+</p>
+
+---
+
 **Chief Systems Engineer:** Eng. Awsan Adel Abdulbari Ahmed Sultan  
 **National ID:** 01010305468 | **Country:** YEMEN | **Contact:** +967 777852433  
 **Certification:** Expert-Level Network Configuration, 6G Architecture & NTN Space-Ground Integration  
@@ -198,6 +206,14 @@ Awsan-Communication-6G/
 
 # مركز أوسان العالمي للاتصالات (إصدار الأمان المتقدم وشبكات 6G NTN)
 # Awsan Communication Global Hub (6G Advanced Security & NTN Edition)
+
+---
+
+<p align="center">
+  <img src="./AWSAN COMMUNICATION 6G.png" alt="AWSAN COMMUNICATION 6G" width="1254" height="1254"/>
+</p>
+
+---
 
 **كبير مهندسي النظم:** م. أوسان عادل عبدالباري أحمد سلطان  
 **الرقم القومي:** 01010305468 | **الدولة:** الجمهورية اليمنية | **الهاتف:** 967777852433+  
