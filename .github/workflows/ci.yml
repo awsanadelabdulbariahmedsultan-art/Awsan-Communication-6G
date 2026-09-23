@@ -1,0 +1,59 @@
+# =========================================================================
+# INTELLECTUAL PROPERTY & COPYRIGHT NOTICE
+# =========================================================================
+# Project Name: Awsan Communication Global Hub (6G NTN Edition)
+# Workflow    : Continuous Integration, Multi-Stack & AI Protocol Validation
+# Edition     : Complete Standards-Track Edition (إصدار معايير موحد مكتمل)
+# Author/Owner: Eng. Awsan Adel Abdulbari Ahmed Sultan
+# Location    : Yemen | National ID: 01010305468 | Tel: +967 777852433
+# Copyright (c) 2026 Eng. Awsan Adel Sultan. All Rights Reserved.
+# =========================================================================
+
+name: 6G NTN Continuous Integration & Protocol Validation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    # --- 1. البيئة السابقة (Node.js لخدمة النماذج الحالية) ---
+    - name: Setup Node.js Environment
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Run Core NTN JavaScript Automated Tests
+      run: |
+        if [ -f "tests/ntn_models.test.js" ]; then
+          node tests/ntn_models.test.js
+        else
+          echo "Notice: tests/ntn_models.test.js not found, skipping JS step."
+        fi
+
+    # --- 2. البيئة الجديدة (Python لتشغيل البروتوكول الموحد ومحرك الذكاء الاصطناعي) ---
+    - name: Setup Python Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    - name: Verify Awsan-6G Unified Protocol & AI Engine
+      run: |
+        echo "Testing Awsan-6G Unified Protocol Suite & Root of Trust Security..."
+        python3 protocol/awsan_6g_unified_protocol.py
+
+    - name: Run Protocol Unit Tests Suite
+      run: |
+        if [ -f "protocol/test_awsan_protocol.py" ]; then
+          python3 -m unittest protocol/test_awsan_protocol.py
+        else
+          echo "Notice: protocol/test_awsan_protocol.py not found, skipping."
+        fi
