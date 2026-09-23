@@ -262,6 +262,41 @@ Awsan-Communication-6G/
 
 ---
 
+
+
+graph TD
+    subgraph Space_Layer ["Space Segment: LEO Constellation (~600 km)"]
+        LEO1[LEO Satellite Spot Beam]
+        LEO2[Orbital Doppler Tracker: ~7.5 km/s]
+    end
+
+    subgraph Terrestrial_Layer ["Terrestrial Segment: gNodeB & Core"]
+        T_Tower[Terrestrial Cellular Tower]
+        Fiber[National Backhaul & Gateways]
+    end
+
+    subgraph AI_Governance ["Autonomous AI & Security Engine"]
+        AI[Awsan Cognitive AI Reasoner]
+        RoT[Master Root of Trust: ID 01010305468]
+        Ledger[Live PQC Audit Ledger]
+    end
+
+    subgraph User_Plane ["Handheld Direct-to-Device (UE)"]
+        Phone[Standard Handset: ~23 dBm / 200 mW]
+        SOS[Emergency SOS Prioritizer]
+    end
+
+    Phone -->|FSPL > 154 dB / S-Band| LEO1
+    Phone -->|RSRP > -105 dBm| T_Tower
+    LEO1 <-->|Carrier Pre-compensation| LEO2
+    AI -->|Channel Diagnostics & Optimizations| RoT
+    RoT -->|Cryptographically Signed OTA Update| Ledger
+    Ledger -.->|Broadcast Patch| LEO1
+    Ledger -.->|Broadcast Patch| T_Tower
+    
+
+
+---
 ## 🔬 2. التحديات الفيزيائية والهندسية الأربعة للاتصال الفضائي المباشر
 
 بناءً على الدراسات والمعايير المعتمدة في 3GPP، يعالج المشروع العقبات الأربع الرئيسية التي تواجه الاتصال المباشر بين الهاتف والقمر الصناعي عبر نماذج رياضية دقيقة:
