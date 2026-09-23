@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use or simulate this protocol in your research or network deployments, please cite it as below."
+authors:
+  - family-names: "Sultan"
+    given-names: "Awsan Adel Abdulbari Ahmed"
+    affiliation: "Chief Systems & 6G Network Architect"
+title: "Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification"
+version: "1.5.0"
+date-released: 2026-09-23
+url: "https://github.com/awsanadelabdulbariahmedsultan-art/Awsan-Communication-6G"
+keywords:
+  - 6G
+  - NTN
+  - Direct-to-Device
+  - 3GPP
+  - Doppler Pre-Compensation
+  - Post-Quantum Cryptography
