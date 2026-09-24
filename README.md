@@ -141,6 +141,7 @@ Awsan-Communication-6G/
 ├── protocol/                               # Unified 6G NTN Global Protocol Suite & AI Engine (Python)
 │   ├── __init__.py                         # Protocol Package API Exposure Initializer
 │   └── awsan_6g_unified_protocol.py        # All-in-One Binary Protocol, AI-Driven OTA & Root of Trust
+│   └── awsan_core_engine.py                # Core Subsystems Engine (Sections 5.1 to 10 Execution)
 │
 ├── tests/                                  # Automated Verification & Unit Test Suite
 │   └── ntn_models.test.js                  # Physical Channel Models Verification (Node.js)
@@ -377,6 +378,7 @@ Awsan-Communication-6G/
 ├── protocol/                               # نواة البروتوكول المعياري ومحرك الذكاء الاصطناعي (Python)
 │   ├── __init__.py                         # ملف تهيئة حزمة البروتوكول البرمجية
 │   └── awsan_6g_unified_protocol.py        # المحرك الشامل للبروتوكول والتحديث الذاتي وجذر الثقة
+│   └── awsan_core_engine.py                # المحرك التنفيذي للأنظمة الفرعية (الأقسام 5.1 إلى 10)
 │
 ├── tests/                                  # جناح الاختبارات والتحقق الآلي
 │   └── ntn_models.test.js                  # اختبارات فيزيائية ورياضية لنماذج القنوات الراديوية
