@@ -14,7 +14,9 @@
 # Awsan Communication Global Hub (6G Advanced Security & NTN Edition)
 
 ---
+
 # [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
+
 ---
 
 <p align="center">
