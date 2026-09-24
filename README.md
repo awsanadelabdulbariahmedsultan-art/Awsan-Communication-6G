@@ -118,27 +118,34 @@ The central application server (`server.js`) exposes real-time endpoints on port
 
 ---
 
+
 ## 📁 5. Complete Repository Hierarchy & Detailed Dependency Tree
 
 ```text
 Awsan-Communication-6G/
 │
-├── workflows/
-│   └── ci.yml                              # Continuous Integration & Automated Tests
+├── .github/                                # GitHub Configuration, Workflows & Sponsorship
+│   ├── workflows/
+│   │   └── ci.yml                          # Multi-Stack Automated Testing (Node.js & Python CI/CD)
+│   └── FUNDING.yml                         # Official Repository Sponsorship Configuration
 │
-├── core-ntn/                               # 6G Non-Terrestrial Network Logic & Physics
-│   ├── link_budget.js                      # Link Budget & Path Loss Equations
-│   ├── doppler_engine.js                   # Orbital Velocity & Doppler Pre-compensation
-│   └── handoff_orchestrator.js             # Predictive Handover & Steering Engine
+├── core-ntn/                               # 6G Non-Terrestrial Network Logic & Physics (JavaScript)
+│   ├── link_budget.js                      # Link Budget, FSPL & Path Loss Mathematical Models
+│   ├── doppler_engine.js                   # Orbital Velocity (~7.5 km/s) & Doppler Pre-compensation
+│   └── handoff_orchestrator.js             # Predictive Multi-RAT Handover & Routing Engine
 │
-├── docs/                                   # Standards & Architecture Documentation
-│   ├── architecture.md                     # 3D SAGIN Unified Architecture
-│   └── 3gpp-specifications.md              # 3GPP Rel-17/18 & 6G Standards Roadmap
+├── docs/                                   # Architectural Whitepapers & Standardization Docs
+│   ├── architecture.md                     # 3D Space-Air-Ground Integrated Network (SAGIN)
+│   └── 3gpp-specifications.md              # 3GPP Rel-17/18/19 & 6G Standards Roadmap
 │
-├── tests/                                  # Automated Test Suite
-│   └── ntn_models.test.js                  # Physical Verification & Model Tests
+├── protocol/                               # Unified 6G NTN Global Protocol Suite & AI Engine (Python)
+│   ├── __init__.py                         # Protocol Package API Exposure Initializer
+│   └── awsan_6g_unified_protocol.py        # All-in-One Binary Protocol, AI-Driven OTA & Root of Trust
 │
-├── node_modules/                           # Deployed Runtime & Express Ecosystem
+├── tests/                                  # Automated Verification & Unit Test Suite
+│   └── ntn_models.test.js                  # Physical Channel Models Verification (Node.js)
+│
+├── node_modules/                           # Deployed Runtime & Express Ecosystem (65 Packages)
 │   ├── accepts/                            # HTTP Accept-* Header Parser
 │   ├── body-parser/                        # Request Body Parsing Middleware
 │   ├── bytes/                              # Byte String Conversion Utilities
@@ -206,17 +213,21 @@ Awsan-Communication-6G/
 │   ├── wrappy/                             # Function Wrapper Callback Utility
 │   └── .package-lock.json                  # Local Dependencies Lock State
 │
-├── server.js                               # Master Application Server & NTN REST API
+├── AWSAN COMMUNICATION 6G.png               # Official 6G Architectural Emblem & Shield Logo
+├── CITATION.cff                            # Academic, IEEE & Institutional Citation Metadata
+├── RFC-AWSAN-6G-NTN.md                     # Proposed Global Open Standard Specification (RFC Track)
+├── README.md                               # Master Project Documentation & Mermaid Architecture
+├── License                                 # Software Licensing & Terms of Use
+├── .gitignore                              # Git Exclusions Configuration
+│
+├── server.js                               # Master Application Server & NTN REST API Gateway
 ├── index.js                                # Application Entry Point
-├── advanced-dns-config.md                  # Advanced DNS-over-TLS & DoH Specifications
+├── advanced-dns-config.md                  # Advanced DNS-over-TLS (DoT) & DoH Specifications
 ├── auto_sync.sh                            # Automated Background Synchronization Script
 ├── sync.sh                                 # Manual Git Synchronization Script
 ├── package.json                            # Project Metadata, Scripts & Dependency Manifest
 ├── package-lock.json                       # Deterministic Dependency Version Tree
-├── License                                 # Software Licensing & Terms
-├── .gitignore                              # Git Exclusions Configuration
-├── nohup.out                               # Background Execution Runtime Output
-└── README.md                               # Master Project Documentation
+└── nohup.out                               # Background Execution Runtime Output
 
 ```
 
@@ -344,100 +355,113 @@ graph TD
 | `POST` | `/api/ntn/doppler` | حساب السرعة المدارية وانزياح دوبلر والتردد المعوض مسبقاً. |
 | `POST` | `/api/ntn/orchestrate` | تحليل إشارة الهاتف واتخاذ قرار التوجيه الفوري بين الأرض والفضاء. |
 
----
-
-## 📁 5. المخطط الهيكلي والشجري المتكامل للمستودع
+---## 📁 5. المخطط الهيكلي والشجري الشامل للمستودع وشجرة الاعتماديات المفصلة
 
 ```text
 Awsan-Communication-6G/
 │
-├── .github/                                # إعدادات منصة GitHub وأتمتة العمليات
-│   └── workflows/
-│       └── ci.yml                          # أتمتة الفحص والتكامل المستمر (CI/CD)
+├── .github/                                # إعدادات منصة GitHub والأتمتة وقنوات الرعاية الرسمية
+│   ├── workflows/
+│   │   └── ci.yml                          # أتمتة الفحص والتكامل المستمر المشترك (Node.js & Python CI/CD)
+│   └── FUNDING.yml                         # ملف ضبط وتفعيل قنوات الرعاية والدعم الرسمي للمستودع
 │
-├── core-ntn/                               # النواة البرمجية لحسابات فيزياء 6G NTN
+├── core-ntn/                               # النواة البرمجية لحسابات فيزياء 6G NTN (JavaScript)
 │   ├── link_budget.js                      # معادلات ميزانية الرابط وفقدان المسار الراديوي
-│   ├── doppler_engine.js                   # حساب السرعة المدارية وتعويض انزياح دوبلر
+│   ├── doppler_engine.js                   # حساب السرعة المدارية (~7.5 كم/ث) وتعويض انزياح دوبلر
 │   └── handoff_orchestrator.js             # محرك التوجيه والتسليم التنبؤي الذكي
 │
 ├── docs/                                   # التوثيق المعماري والمعايير العالمية
 │   ├── architecture.md                     # معمارية الشبكة الموحدة ثلاثية الأبعاد (SAGIN)
-│   └── 3gpp-specifications.md              # مواءمة مواصفات 3GPP Rel-17/18 ومسار 6G
+│   └── 3gpp-specifications.md              # مواءمة مواصفات 3GPP ومسار أبحاث الجيل السادس
+│
+├── protocol/                               # نواة البروتوكول المعياري ومحرك الذكاء الاصطناعي (Python)
+│   ├── __init__.py                         # ملف تهيئة حزمة البروتوكول البرمجية
+│   └── awsan_6g_unified_protocol.py        # المحرك الشامل للبروتوكول والتحديث الذاتي وجذر الثقة
 │
 ├── tests/                                  # جناح الاختبارات والتحقق الآلي
-│   └── ntn_models.test.js                  # اختبارات رياضية وفيزيائية للنماذج البرمجية
+│   └── ntn_models.test.js                  # اختبارات فيزيائية ورياضية لنماذج القنوات الراديوية
 │
 ├── node_modules/                           # حزم بيئة التشغيل وإطار عمل Express.js (65 مجلداً)
-│   ├── accepts/                            # معالجة ترويسات HTTP Accept
+│   ├── accepts/                            # معالجة وتفسير ترويسات HTTP Accept
 │   ├── body-parser/                        # وسيط قراءة وتحليل نصوص الطلبات البرمجية
-│   ├── bytes/                              # دوال تحويل وقراءة أحجام البايت
-│   ├── call-bind-apply-helpers/            # أدوات ربط وتنفيذ دوال JavaScript
-│   ├── call-bound/                         # ربط استدعاءات النماذج الأصلية بدقة
-│   ├── content-disposition/                # معالجة ترويسة Content-Disposition
-│   ├── content-type/                       # تحديد وصياغة أنواع المحتوى (MIME)
-│   ├── cookie/                             # تشفير وقراءة ملفات تعريف الارتباط
-│   ├── cookie-signature/                   # التوقيع الرقمي لملفات الكوكيز
-│   ├── debug/                              # وحدة تتبع الأخطاء البرمجية الخفيفة
+│   ├── bytes/                              # دوال تحويل وقراءة أحجام وسعات البايت
+│   ├── call-bind-apply-helpers/            # أدوات ربط وتنفيذ دوال JavaScript الجوهرية
+│   ├── call-bound/                         # ربط استدعاءات النماذج الأصلية بدقة فائقة
+│   ├── content-disposition/                # معالجة وتوجيه ترويسة Content-Disposition
+│   ├── content-type/                       # تحديد وصياغة أنواع المحتوى الرقمي (MIME)
+│   ├── cookie/                             # تشفير وقراءة وإدارة ملفات تعريف الارتباط
+│   ├── cookie-signature/                   # التوقيع الرقمي المشفر لملفات الكوكيز
+│   ├── debug/                              # وحدة تتبع ومعالجة الأخطاء البرمجية الخفيفة
 │   ├── depd/                               # إدارة التنبيهات البرمجية للوظائف المهملة
-│   ├── dunder-proto/                       # معالجة الوصول للكائنات عبر __proto__
-│   ├── ee-first/                           # التقاط أول حدث في Event Emitter
-│   ├── encodeurl/                          # ترميز وتشفير الروابط وعناوين URL
-│   ├── es-define-property/                 # معالجة خصائص الكائنات في ECMAScript
+│   ├── dunder-proto/                       # معالجة الوصول للكائنات عبر خاصية __proto__
+│   ├── ee-first/                           # التقاط أول حدث صادر في Event Emitter
+│   ├── encodeurl/                          # ترميز وتشفير الروابط وعناوين URL بأمان
+│   ├── es-define-property/                 # معالجة وإسناد خصائص الكائنات في ECMAScript
 │   ├── es-errors/                          # منشئ أخطاء ECMAScript القياسية
 │   ├── es-object-atoms/                    # المراجع الأساسية لكائنات لغة JavaScript
 │   ├── escape-html/                        # تنظيف نصوص HTML للحماية من هجمات XSS
-│   ├── etag/                               # توليد رموز ETag للتخزين المؤقت
-│   ├── express/                            # إطار العمل الأساسي لبناء خوادم الويب والـ API
-│   ├── finalhandler/                       # معالجة الاستجابة النهائية خارج الوسطاء
-│   ├── forwarded/                          # قراءة عناوين IP المحولة عبر الوكلاء
+│   ├── etag/                               # توليد رموز ETag للتحكم في التخزين المؤقت
+│   ├── express/                            # إطار العمل الأساسي لبناء خوادم الويب وبوابات الـ API
+│   ├── finalhandler/                       # معالجة الاستجابة النهائية خارج نطاق الوسطاء
+│   ├── forwarded/                          # قراءة وفلترة عناوين IP المحولة عبر الوكلاء
 │   ├── fresh/                              # فحص حداثة وصلاحية الذاكرة المؤقتة لـ HTTP
-│   ├── function-bind/                      # الدالة القياسية لربط سياق الدوال (bind)
-│   ├── get-intrinsic/                      # جلب واستدعاء دوال JavaScript الجوهرية
-│   ├── get-proto/                          # استرجاع النماذج الأولية للكائنات
-│   ├── gopd/                               # استخراج واصفات خصائص الكائنات
-│   ├── has-symbols/                        # التحقق من دعم محرك المتصفح للرموز (Symbols)
+│   ├── function-bind/                      # الدالة القياسية لربط سياق الدوال البرمجية (bind)
+│   ├── get-intrinsic/                      # جلب واستدعاء دوال JavaScript الجوهرية المدمجة
+│   ├── get-proto/                          # استرجاع النماذج الأولية للكائنات البرمجية
+│   ├── gopd/                               # استخراج واصفات خصائص الكائنات بدقة
+│   ├── has-symbols/                        # التحقق من دعم بيئة التشغيل لرموز (Symbols)
 │   ├── hasown/                             # دالة التحقق الآمنة من ملكية الخصائص للكائنات
-│   ├── http-errors/                        # منشئ أخطاء HTTP المعيارية
-│   ├── iconv-lite/                         # تحويل وتشفير المحارف اللغوية
-│   ├── inherits/                           # دعم الوراثة البرمجية بين الكائنات
-│   ├── ipaddr.js/                          # محرك إدارة ومعالجة عناوين IPv4 و IPv6
-│   ├── is-promise/                         # التحقق من نوع الوعود البرمجية (Promises)
+│   ├── http-errors/                        # منشئ أخطاء HTTP المعيارية المنظمة
+│   ├── iconv-lite/                         # تحويل وتشفير المحارف اللغوية والترميزات
+│   ├── inherits/                           # دعم وتفعيل الوراثة البرمجية بين الكائنات
+│   ├── ipaddr.js/                          # محرك إدارة ومعالجة وفحص عناوين IPv4 و IPv6
+│   ├── is-promise/                         # التحقق من نوع وصحة الوعود البرمجية (Promises)
 │   ├── math-intrinsics/                    # استدعاء العمليات الرياضية الجوهرية المدمجة
-│   ├── media-typer/                        # تحليل وتحديد أنواع الوسائط الرقمية
-│   ├── merge-descriptors/                  # دمج واصفات الكائنات البرمجية
-│   ├── mime-db/                            # قاعدة بيانات شاملة لأنواع ملفات MIME
-│   ├── mime-types/                         # مطابقة الامتدادات مع أنواع المحتوى
-│   ├── ms/                                 # تحويل التوقيت وأجزاء الثانية إلى نصوص
-│   ├── negotiator/                         # مكتبة التفاوض على محتوى HTTP
-│   ├── object-inspect/                     # الفحص البصري وطباعة الكائنات
+│   ├── media-typer/                        # تحليل وتحديد أنواع الوسائط والملفات الرقمية
+│   ├── merge-descriptors/                  # دمج وتوحيد واصفات الكائنات البرمجية
+│   ├── mime-db/                            # قاعدة بيانات شاملة ومعيارية لأنواع ملفات MIME
+│   ├── mime-types/                         # مطابقة امتدادات الملفات مع أنواع المحتوى
+│   ├── ms/                                 # تحويل التوقيت وأجزاء الثانية إلى نصوص مفهومة
+│   ├── negotiator/                         # مكتبة التفاوض التلقائي على محتوى HTTP
+│   ├── object-inspect/                     # الفحص البصري وطباعة محتويات الكائنات
 │   ├── on-finished/                        # مراقبة اكتمال إرسال واستقبال طلبات HTTP
-│   ├── once/                               # ضمان تنفيذ الدالة البرمجية مرة واحدة فقط
-│   ├── parseurl/                           # المحلل السريع لعناوين الروابط المخزنة
-│   ├── path-to-regexp/                     # تحويل مسارات Express إلى تعبيرات نمطية
-│   ├── proxy-addr/                         # تصفية عناوين IP القادمة عبر بروكسي
+│   ├── once/                               # ضمان تنفيذ الدالة البرمجية لمرة واحدة فقط
+│   ├── parseurl/                           # المحلل السريع والمخزن مؤقتاً لعناوين الروابط
+│   ├── path-to-regexp/                     # تحويل مسارات خادم Express إلى تعبيرات نمطية
+│   ├── proxy-addr/                         # تصفية وفحص عناوين IP القادمة عبر بروكسي
 │   ├── qs/                                 # تحليل نصوص الاستعلامات المعقدة والمتشعبة
-│   ├── range-parser/                       # تحليل أجزاء الملفات ونطاقات التحميل
-│   ├── raw-body/                           # قراءة البث المباشر للبيانات إلى Buffer
-│   ├── router/                             # محرك توجيه الطلبات الداخلي لـ Express
-│   ├── safer-buffer/                       # تخصيص الذاكرة المؤقتة بأمان تام
-│   ├── send/                               # محرك بث وتدفق الملفات الثابتة عبر HTTP
-│   ├── serve-static/                       # وسيط تقديم الملفات والمواقع الثابتة
-│   ├── setprototypeof/                     # إسناد النماذج الأولية للكائنات
-│   ├── side-channel/                       # التخزين الجانبي الآمن لبيانات الكائنات
-│   ├── side-channel-list/                  # هيكل بيانات القوائم للتخزين الجانبي
-│   ├── side-channel-map/                   # هيكل بيانات الخرائط للتخزين الجانبي
-│   ├── side-channel-weakmap/               # هيكل بيانات WeakMap للتخزين المؤقت
+│   ├── range-parser/                       # تحليل أجزاء الملفات ونطاقات التحميل الجزئي
+│   ├── raw-body/                           # قراءة البث المباشر للبيانات وتحويلها إلى Buffer
+│   ├── router/                             # محرك توجيه الطلبات الداخلي لإطار Express
+│   ├── safer-buffer/                       # تخصيص وإدارة الذاكرة المؤقتة بأمان تام
+│   ├── send/                               # محرك بث وتدفق الملفات الثابتة عبر بروتوكول HTTP
+│   ├── serve-static/                       # وسيط تقديم واستضافة الملفات والمواقع الثابتة
+│   ├── setprototypeof/                     # إسناد وضبط النماذج الأولية للكائنات
+│   ├── side-channel/                       # التخزين الجانبي الآمن لبيانات الكائنات البرمجية
+│   ├── side-channel-list/                  # هيكل بيانات القوائم للتخزين الجانبي الآمن
+│   ├── side-channel-map/                   # هيكل بيانات الخرائط للتخزين الجانبي الآمن
+│   ├── side-channel-weakmap/               # هيكل بيانات WeakMap للتخزين الجانبي المؤقت
 │   ├── statuses/                           # جدول ومصفوفة رموز حالات استجابة HTTP
-│   ├── toidentifier/                       # تنظيف وتحويل النصوص إلى معرفات برمجية
-│   ├── type-is/                            # التحقق الصارم من نوع محتوى الطلب
-│   ├── unpipe/                             # فصل وإلغاء تدفق البيانات بين القنوات
-│   ├── vary/                               # إدارة وتعديل ترويسة HTTP Vary
-│   ├── wrappy/                             # أداة تغليف دوال الاستدعاء الرجعي
-│   └── .package-lock.json                  # ملف تثبيت الإصدارات المحلية للحزم
+│   ├── toidentifier/                       # تنظيف وتحويل النصوص إلى معرفات برمجية صالحة
+│   ├── type-is/                            # التحقق الصارم من تطابق نوع محتوى الطلب
+│   ├── unpipe/                             # فصل وإلغاء تدفق وتمرير البيانات بين القنوات
+│   ├── vary/                               # إدارة وتعديل ترويسة HTTP Vary للتحكم بالتخزين
+│   ├── wrappy/                             # أداة تغليف دوال الاستدعاء الرجعي (Callback)
+│   └── .package-lock.json                  # ملف تثبيت الإصدارات المحلية للحزم بدقة
 │
-├── server.js                               # خادم التطبيق الرئيسي وواجهات الـ NTN API
+├── AWSAN COMMUNICATION 6G.png               # الشعار والدرع الرسمي المعتمد لمشروع اتصالات 6G
+├── CITATION.cff                            # ملف التوثيق والاستشهاد الأكاديمي الدولي (IEEE / Research)
+├── RFC-AWSAN-6G-NTN.md                     # وثيقة المعيار الدولي المفتوح المقترح (RFC Track)
+├── README.md                               # ملف التوثيق الشامل والرسمي للمستودع ومخطط المعمارية
+├── License                                 # ترخيص وشروط الاستخدام وحماية الملكية الفكرية
+├── .gitignore                              # ملف استثناءات وفلاتر نظام Git
+│
+├── server.js                               # خادم التطبيق الرئيسي وبوابات الـ NTN REST API
 ├── index.js                                # نقطة الدخول البرمجية للمشروع
-├── advanced-dns-config.md                  # توثيق إعدادات DNS المشفر (DoT / DoH)
-├── auto_sync
-
+├── advanced-dns-config.md                  # توثيق إعدادات DNS المشفر فائق السرعة (DoT / DoH)
+├── auto_sync.sh                            # سكربت المزامنة الآلية الخلفية لـ Git
+├── sync.sh                                 # سكربت المزامنة اليدوية لـ Git
+├── package.json                            # بيان المشروع والتبعيات والبيانات الوصفية
+├── package-lock.json                       # شجرة تثبيت إصدارات الحزم والاعتماديات بدقة
+└── nohup.out                               # مخرجات وسجلات التشغيل الخلفي للنظام
 ```
