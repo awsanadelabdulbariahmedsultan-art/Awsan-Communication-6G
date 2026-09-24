@@ -15,63 +15,13 @@
 
 ---
 
-# [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
-
----
-
 <p align="center">
   <img src="./AWSAN COMMUNICATION 6G.png" alt="AWSAN COMMUNICATION 6G" width="1254" height="1254"/>
 </p>
 
 ---
 
-**Chief Systems Engineer:** Eng. Awsan Adel Abdulbari Ahmed Sultan  
-**National ID:** 01010305468 | **Country:** YEMEN | **Contact:** +967 777852433  
-**Certification:** Expert-Level Network Configuration, 6G Architecture & NTN Space-Ground Integration  
-**Edition:** Complete Experimental Edition (إصدار تجريبي مكتمل)
 
----
-
-## 🛰️ 1. Executive Summary & 6G NTN Architecture
-
-**Awsan Communication Global Hub** implements a unified **Space-Air-Ground Integrated Network (SAGIN)** topology. Rather than treating satellite communications as an isolated vertical solution, this project integrates low Earth orbit (LEO) satellites as an extended **Radio Access Network (RAN)** layer connected seamlessly to a 6G Service-Based Core.
-
-The architecture addresses direct satellite-to-smartphone connectivity (**Direct-to-Device - D2D**), allowing standard user devices (UE) to establish links with orbiting satellites when terrestrial cellular towers are out of reach or disrupted by natural disasters.
-
----
-```mermaid
-graph TD
-    subgraph Space_Layer ["Space Segment: LEO Constellation (~600km)"]
-        LEO1["LEO Satellite Spot Beam"]
-        LEO2["Orbital Doppler Tracker (~7.5 km/s)"]
-    end
-
-    subgraph Terrestrial_Layer ["Terrestrial Segment: gNodeB & Core"]
-        T_Tower["Terrestrial Cellular Tower"]
-        Fiber["National Backhaul & Gateways"]
-    end
-
-    subgraph AI_Governance ["Autonomous AI & Security Engine"]
-        AI["Awsan Cognitive AI Reasoner"]
-        RoT["Master Root of Trust: ID 01010305468"]
-        Ledger["Live PQC Audit Ledger"]
-    end
-
-    subgraph User_Plane ["Handheld Direct-to-Device (UE)"]
-        Phone["Standard Handset (~23 dBm / 200 mW)"]
-        SOS["Emergency SOS Prioritizer"]
-    end
-
-    Phone -->|"FSPL > 154 dB (S-Band)"| LEO1
-    Phone -->|"RSRP > -105 dBm"| T_Tower
-    LEO1 <-->|"Carrier Pre-compensation"| LEO2
-    AI -->|"Channel Diagnostics & Optimizations"| RoT
-    RoT -->|"Cryptographically Signed OTA Update"| Ledger
-    Ledger -.->|"Broadcast Patch"| LEO1
-    Ledger -.->|"Broadcast Patch"| T_Tower
-```
-    
----
 
 # Awsan-Communication-6G
 
@@ -144,6 +94,47 @@ http://localhost:8080
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full copyright and terms of use.
 
+---
+
+## 🛰️ 1. Executive Summary & 6G NTN Architecture
+
+**Awsan Communication Global Hub** implements a unified **Space-Air-Ground Integrated Network (SAGIN)** topology. Rather than treating satellite communications as an isolated vertical solution, this project integrates low Earth orbit (LEO) satellites as an extended **Radio Access Network (RAN)** layer connected seamlessly to a 6G Service-Based Core.
+
+The architecture addresses direct satellite-to-smartphone connectivity (**Direct-to-Device - D2D**), allowing standard user devices (UE) to establish links with orbiting satellites when terrestrial cellular towers are out of reach or disrupted by natural disasters.
+
+---
+
+```mermaid
+graph TD
+    subgraph Space_Layer ["Space Segment: LEO Constellation (~600km)"]
+        LEO1["LEO Satellite Spot Beam"]
+        LEO2["Orbital Doppler Tracker (~7.5 km/s)"]
+    end
+
+    subgraph Terrestrial_Layer ["Terrestrial Segment: gNodeB & Core"]
+        T_Tower["Terrestrial Cellular Tower"]
+        Fiber["National Backhaul & Gateways"]
+    end
+
+    subgraph AI_Governance ["Autonomous AI & Security Engine"]
+        AI["Awsan Cognitive AI Reasoner"]
+        RoT["Master Root of Trust: ID 01010305468"]
+        Ledger["Live PQC Audit Ledger"]
+    end
+
+    subgraph User_Plane ["Handheld Direct-to-Device (UE)"]
+        Phone["Standard Handset (~23 dBm / 200 mW)"]
+        SOS["Emergency SOS Prioritizer"]
+    end
+
+    Phone -->|"FSPL > 154 dB (S-Band)"| LEO1
+    Phone -->|"RSRP > -105 dBm"| T_Tower
+    LEO1 <-->|"Carrier Pre-compensation"| LEO2
+    AI -->|"Channel Diagnostics & Optimizations"| RoT
+    RoT -->|"Cryptographically Signed OTA Update"| Ledger
+    Ledger -.->|"Broadcast Patch"| LEO1
+    Ledger -.->|"Broadcast Patch"| T_Tower
+```
 
 ---
 
@@ -355,11 +346,76 @@ The **Awsan-6G-NTN** architecture natively supports the six transformative pilla
 </p>
 
 ---
+# منظومة الاتصالات الفضائية والأرضية | Awsan-Communication-6G
 
-**كبير مهندسي النظم:** م. أوسان عادل عبدالباري أحمد سلطان  
-**الرقم القومي:** 01010305468 | **الدولة:** الجمهورية اليمنية | **الهاتف:** 967777852433+  
-**الاعتماد المهني:** خبير تهيئة الشبكات المتقدمة، معمارية الجيل السادس (6G)، وتكامل الفضاء والأرض (NTN)  
-**نوع الإصدار:** إصدار تجريبي مكتمل (Complete Experimental Edition)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
+![Version](https://img.shields.io/badge/الإصدار-v1.5.0.1-green.svg)
+![Edition](https://img.shields.io/badge/النسخة-إصدار%20تجريبي%20مكتمل-blue.svg)
+![License](https://img.shields.io/badge/الترخيص-MIT-yellow.svg)
+
+---
+
+## 📋 البيانات التعريفية والمواصفات الهندسية
+* **المواصفة القياسية:** RFC-AWSAN-6G-NTN-0001
+* **نوع الإصدار:** Complete Experimental Edition (إصدار تجريبي مكتمل)
+* **مهندس النظم الرئيسي:** Eng. Awsan Adel Abdulbari Ahmed Sultan
+* **الرقم الوطني:** 01010305468 | **الدولة:** الجمهورية اليمنية (YEMEN) | **رقم التواصل:** 00967777852433
+* **الاعتماد الفني:** خبير معتمد في إعداد الشبكات، معمارية الجيل السادس (6G Architecture)، والتكامل الفضائي-الأرضي (NTN Space-Ground Integration)
+
+---
+
+## 🚀 المعالم التقنية البارزة للإصدار (v1.5.0.1)
+- **نماذج الانتشار الفيزيائي:** دمج نماذج الانتشار لنطاق S-Band وفق معايير 3GPP Rel-18 الفيزيائية (FSPL, KTB, SNR).
+- **الديناميكا المدارية:** نظام تعويض مسبق لتأثير دوبلر المداري عالي السرعة (~7.5 كم/ثانية).
+- **إدارة الشبكات والانتقال:** آلة حالات تنبؤية للتحويل بين الشبكات المتعددة (Multi-RAT) مع أسبقية قصوى لاتصالات الطوارئ الاستباقية (Emergency SOS).
+- **النواة الذاتية الذكية:** دمج محرك ذكاء اصطناعي أصلي للتطور والتكيف الذاتي للبروتوكول مع خدمة التحديثات الهوائية (OTA Daemon).
+- **الأمان والحوكمة الرقمية:** حوكمة التشفير عبر جذر الثقة للمؤلف الرئيسي (Master Author Root of Trust).
+- **التكامل والاختبار المستمر:** خطوط أنابيب أتمتة متكاملة (CI/CD) مع حزم اختبارات برمجية شاملة ومعتمدة.
+
+
+---
+
+## 🐳 التشغيل والنشر السريع عبر الحاويات (Docker)
+
+### بناء وتشغيل الحاوية فوراً:
+```bash
+# 1. بناء صورة الحاوية محلياً
+docker build -t awsanadelabdulbariahmedsultan-art/awsan-6g-ntn .
+
+# 2. تشغيل الحاوية
+docker run -d -p 8080:8080 --name awsan-6g awsanadelabdulbariahmedsultan-art/awsan-6g-ntn
+```
+
+### استعراض التطبيق:
+بعد تشغيل الحاوية، يمكنك الدخول عبر المتصفح إلى:
+```text
+http://localhost:8080
+```
+
+---
+
+## 📖 الاستشهاد الأكاديمي الدولي (Citation)
+
+### صيغة الاستشهاد النصي:
+> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v1.5.0.1). Zenodo. https://doi.org/10.5281/zenodo.22941921
+
+### صيغة BibTeX للباحثين والمجلات العلمية:
+```bibtex
+@misc{sultan2026awsan6g,
+  author       = {Eng. Awsan Adel Abdulbari Ahmed Sultan},
+  title        = {Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification},
+  year         = {2026},
+  version      = {v1.5.0.1},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22941921},
+  url          = {[https://doi.org/10.5281/zenodo.22941921](https://doi.org/10.5281/zenodo.22941921)}
+}
+```
+
+---
+
+## 📜 الترخيص القانوني (License)
+هذا المشروع مرخص بموجب **رخصة MIT** القياسية مع الاحتفاظ بحقوق الملكية الفكرية - للمزيد من التفاصيل يُرجى الاطلاع على ملف [LICENSE](LICENSE).
 
 ---
 
