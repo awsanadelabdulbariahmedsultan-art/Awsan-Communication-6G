@@ -235,6 +235,23 @@ Awsan-Communication-6G/
 
 ---
 
+---
+
+## 🚀 6G Enabled Applications & Next-Gen Use Cases
+
+The **Awsan-6G-NTN** architecture natively supports the six transformative pillars defined under the **ITU-T IMT-2030** vision for 6G networks:
+
+| Application Domain | Key 6G Capabilities | Latency Target | Reliability & Bandwidth | Primary Use Cases |
+| :--- | :--- | :---: | :---: | :--- |
+| **1. Extended Reality (XR) & Holographic Telepresence** | Cinema-grade photorealistic immersion, 6DoF interaction, zero-motion-sickness streaming. | $< 1\text{ ms}$ | $> 100\text{ Gbps}$ / $99.999\%$ | Remote holographic meetings, virtual immersive education, tactile internet surgery. |
+| **2. Native / In-Network Artificial Intelligence** | AI embedded into the radio interface and RAN fabric; automated closed-loop self-optimization. | Real-Time | Distributed Edge Compute | Autonomous radio resource management, dynamic beam scheduling, predictive self-healing. |
+| **3. Real-Time Digital Twins** | Continuous bidirectional state synchronization between physical assets and real-time virtual models. | $< 5\text{ ms}$ | High-Throughput Stream | Smart cities, automated container terminals, aerospace telemetry, predictive industrial maintenance. |
+| **4. Autonomous Mobility & Swarm Robotics** | Deterministic cooperative perception and distributed multi-agent swarm coordination. | $< 1\text{ ms}$ | $99.99999\%$ (Ultra-Reliable) | Connected Autonomous Vehicles (V2X), automated delivery drones, cooperative industrial robots. |
+| **5. Space-Air-Ground 3D Networks** | Seamless vertical coverage integrating LEO satellites, HAPS, drones, and terrestrial cells. | Flexible | 100% Ubiquitous Terrestrial & Space | Universal connectivity for rugged mountainous areas, desert logistics corridors, maritime routes. |
+| **6. Integrated Sensing and Communication (ISAC)** | Joint radar-telecom wave utilization; the radio network acts as an environmental sensor. | Sub-ms | Centimeter-level accuracy | Remote vital-sign tracking, environmental hazard detection, ground and orbital space situational awareness. |
+
+
+---
 <!-- =========================================================================
    إشعار الملكية الفكرية وحقوق النشر البرمجية
    =========================================================================
@@ -467,3 +484,26 @@ Awsan-Communication-6G/
 ├── package-lock.json                       # شجرة تثبيت إصدارات الحزم والاعتماديات بدقة
 └── nohup.out                               # مخرجات وسجلات التشغيل الخلفي للنظام
 ```
+
+
+
+
+
+
+---
+
+---
+
+## 🚀 التطبيقات والخدمات المستقبلية المدعومة في شبكات 6G
+
+تدعم معمارية **مركز أوسان لشبكات 6G NTN** الركائز الست الأساسية للجيل القادم وفق رؤية الاتحاد الدولي للاتصالات (**ITU-T IMT-2030**):
+
+| مجال التطبيق | القدرات المعمارية للجيل السادس | زمن التأخير المستهدف | الموثوقية ومعدل نقل البيانات | حالات الاستخدام والتطبيق العملي |
+| :--- | :--- | :---: | :---: | :--- |
+| **1. الواقع الممتد (XR) والتواجد الهولوغرامي** | بيئات واقع افتراضي ومعزز فائقة الدقة (6DoF) وانعدام الدوار الحركي. | أقل من 1 مللي ثانية | أكثر من 100 جيجابت/ث | الاجتماعات الهولوغرامية، العمليات الجراحية عن بُعد، والتعليم التفاعلي. |
+| **2. الذكاء الاصطناعي المدمج بالشبكة** | الذكاء الاصطناعي ليس تطبيقاً خارجياً بل جزء من نسيج واجهة الراديو وتوزيع الموارد. | في الوقت الحقيقي | حوسبة حافة موزعة | الإدارة الذاتية للطيف الترددي، توجيه الحزم الفضائية، والإصلاح الذاتي الآلي. |
+| **3. التوأم الرقمي الحي (Digital Twins)** | مزامنة رقمية فورية ثنائية الاتجاه بين الأصول الفيزيائية ونظيراتها الافتراضية. | أقل من 5 مللي ثانية | تدفق بيانات متواصل | المدن الذكية، الموانئ المؤتمتة، محاكاة الأنظمة الصناعية وتوقع الأعطال. |
+| **4. التنقل الذاتي وروبوتات الأسراب** | إدراك تعاوني للمركبات ذاتية القيادة وتنسيق جماعي دقيق لأسراب الدرونز والروبوتات. | أقل من 1 مللي ثانية | موثوقية 99.99999% | السيارات ذاتية القيادة (V2X)، طائرات التوصيل الذاتي، الروبوتات الصناعية. |
+| **5. الشبكات ثلاثية الأبعاد (3D Networks)** | تغطية رأسية متكاملة تدمج أقمار LEO والمنصات الجوية (HAPS) والأبراج الأرضية. | مرن ومستدام | تغطية بنسبة 100% | ربط المناطق الجبلية الوعرة، ممرات التجارة البرية والبحرية، والصحاري. |
+| **6. الاستشعار الراديوي والاتصال المدمج (ISAC)** | استخدام نفس الموجات اللاسلكية للرادار والاتصال معاً؛ الشبكة تعمل كمستشعر بيئي. | أجزاء من الملي ثانية | دقة سنتيمترية | المراقبة الصحية عن بُعد، رصد الكوارث الطبيعية، ومراقبة حركة الفضاء والأرض. |
+---
