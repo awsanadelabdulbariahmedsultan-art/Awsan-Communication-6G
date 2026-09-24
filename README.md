@@ -118,10 +118,7 @@ http://localhost:8080
 ## 📜 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full copyright terms and conditions.
 
----
 
-## 📜 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full copyright and terms of use.
 
 ---
 
