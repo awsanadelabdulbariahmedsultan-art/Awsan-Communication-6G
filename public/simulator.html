@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Awsan-6G-NTN: Live Interactive Channel Simulator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: #0b132b;
+      color: #e0e1dd;
+      margin: 0;
+      padding: 25px;
+    }
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      background: #1c2541;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      border: 1px solid #3a506b;
+    }
+    h1 {
+      color: #48cae4;
+      text-align: center;
+      margin-top: 0;
+      font-size: 26px;
+    }
+    .header-sub {
+      text-align: center;
+      color: #8d99ae;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+    .control-group {
+      background: #0b132b;
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid #3a506b;
+    }
+    .control-group h3 {
+      margin-top: 0;
+      color: #90e0ef;
+      font-size: 16px;
+      border-bottom: 1px solid #3a506b;
+      padding-bottom: 8px;
+    }
+    label {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px 0 6px 0;
+      font-size: 13.5px;
+    }
+    input[type=range] {
+      width: 100%;
+      accent-color: #48cae4;
+    }
+    .output-card {
+      background: #0b132b;
+      padding: 18px;
+      border-radius: 8px;
+      border: 1px solid #48cae4;
+    }
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed #3a506b;
+      font-size: 14px;
+    }
+    .metric-val {
+      font-family: monospace;
+      font-weight: bold;
+      color: #00f5d4;
+      font-size: 15px;
+    }
+    .status-badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .viable { background: #06d6a0; color: #073b4c; }
+    .unviable { background: #ef476f; color: #ffffff; }
+    .emergency-toggle {
+      margin-top: 15px;
+      background: #e63946;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🛰️ Awsan-6G-NTN: Live Radio Channel & Handover Simulator</h1>
+  <div class="header-sub">
+    Architect: Eng. Awsan Adel Abdulbari Ahmed Sultan | National ID: 01010305468 | 3GPP Rel-18 Alignment
+  </div>
+
+  <div class="grid">
+    <!-- INPUT PARAMETERS -->
+    <div class="control-group">
+      <h3>📡 Space-Ground Physics Inputs</h3>
+
+      <label>Slant Range (Distance to LEO): <span id="distVal">600 km</span></label>
+      <input type="range" id="dist" min="500" max="1500" value="600" oninput="updateSim()">
+
+      <label>Carrier Frequency: <span id="freqVal">2.0 GHz (S-Band)</span></label>
+      <input type="range" id="freq" min="1.0" max="30.0" step="0.5" value="2.0" oninput="updateSim()">
+
+      <label>Satellite Elevation Angle: <span id="elevVal">45°</span></label>
+      <input type="range" id="elev" min="5" max="90" value="45" oninput="updateSim()">
+
+      <label>Orbital Velocity: <span id="velVal">7.5 km/s</span></label>
+      <input type="range" id="vel" min="7.0" max="8.0" step="0.1" value="7.5" oninput="updateSim()">
+
+      <label>Terrestrial RSRP Signal: <span id="rsrpVal">-110 dBm</span></label>
+      <input type="range" id="rsrp" min="-135" max="-70" value="-110" oninput="updateSim()">
+
+      <button class="emergency-toggle" id="sosBtn" onclick="toggleEmergency()">🚨 Toggle Emergency SOS: OFF</button>
+    </div>
+
+    <!-- REAL-TIME CALCULATED OUTPUTS -->
+    <div class="output-card">
+      <h3 style="margin-top:0; color:#00f5d4; border-bottom:1px solid #3a506b; padding-bottom:8px;">
+        📊 3GPP Mathematical Outputs
+      </h3>
+
+      <div class="metric">
+        <span>Free-Space Path Loss (FSPL):</span>
+        <span class="metric-val" id="fsplOut">154.04 dB</span>
+      </div>
+
+      <div class="metric">
+        <span>Received Signal Power (Prx):</span>
+        <span class="metric-val" id="prxOut">-101.04 dBm</span>
+      </div>
+
+      <div class="metric">
+        <span>Thermal Noise Power (kTB):</span>
+        <span class="metric-val" id="noiseOut">-103.98 dBm</span>
+      </div>
+
+      <div class="metric">
+        <span>Signal-to-Noise Ratio (SNR):</span>
+        <span class="metric-val" id="snrOut">+2.94 dB</span>
+      </div>
+
+      <div class="metric">
+        <span>D2D Link Viability:</span>
+        <span id="viabilityBadge" class="status-badge viable">VIABLE (3GPP COMPLIANT)</span>
+      </div>
+
+      <div class="metric">
+        <span>Orbital Doppler Shift (Carrier Offset):</span>
+        <span class="metric-val" id="dopplerOut">±35.38 kHz</span>
+      </div>
+
+      <div class="metric" style="border-bottom:none;">
+        <span>Multi-RAT Orchestrated State:</span>
+        <span class="metric-val" id="handoverState" style="color:#ffd166;">LEO_CONNECTED</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let isEmergency = false;
+
+function toggleEmergency() {
+  isEmergency = !isEmergency;
+  const btn = document.getElementById("sosBtn");
+  btn.innerText = isEmergency ? "🚨 Emergency SOS: ACTIVE" : "🚨 Toggle Emergency SOS: OFF";
+  btn.style.background = isEmergency ? "#ff0054" : "#e63946";
+  updateSim();
+}
+
+function updateSim() {
+  const d_km = parseFloat(document.getElementById("dist").value);
+  const f_ghz = parseFloat(document.getElementById("freq").value);
+  const elev = parseFloat(document.getElementById("elev").value);
+  const vel_kms = parseFloat(document.getElementById("vel").value);
+  const tn_rsrp = parseFloat(document.getElementById("rsrp").value);
+
+  document.getElementById("distVal").innerText = d_km + " km";
+  document.getElementById("freqVal").innerText = f_ghz.toFixed(1) + " GHz";
+  document.getElementById("elevVal").innerText = elev + "°";
+  document.getElementById("velVal").innerText = vel_kms.toFixed(1) + " km/s";
+  document.getElementById("rsrpVal").innerText = tn_rsrp + " dBm";
+
+  // 1. FSPL = 20*log10(d_m) + 20*log10(f_hz) - 147.55
+  const d_m = d_km * 1000.0;
+  const f_hz = f_ghz * 1e9;
+  const fspl = 20.0 * Math.log10(d_m) + 20.0 * Math.log10(f_hz) - 147.55;
+
+  // 2. Link Budget: Ptx(23 dBm) + Gtx(0 dBi) + Grx(30 dBi) - FSPL
+  const prx = 23.0 + 0.0 + 30.0 - fspl;
+
+  // 3. Thermal Noise: k * T * B (10 MHz)
+  const kTB_dbm = 10.0 * Math.log10(1.380649e-23 * 290.0 * 10e6 * 1000.0);
+  const snr = prx - kTB_dbm;
+
+  // 4. Doppler: delta_f = (v / c) * cos(elev) * f
+  const c = 299792458.0;
+  const doppler_hz = ((vel_kms * 1000.0) / c) * Math.cos(elev * Math.PI / 180.0) * f_hz;
+
+  // Display calculations
+  document.getElementById("fsplOut").innerText = fspl.toFixed(2) + " dB";
+  document.getElementById("prxOut").innerText = prx.toFixed(2) + " dBm";
+  document.getElementById("noiseOut").innerText = kTB_dbm.toFixed(2) + " dBm";
+  document.getElementById("snrOut").innerText = (snr >= 0 ? "+" : "") + snr.toFixed(2) + " dB";
+  document.getElementById("dopplerOut").innerText = "±" + (doppler_hz / 1000.0).toFixed(2) + " kHz";
+
+  // Viability check
+  const badge = document.getElementById("viabilityBadge");
+  if (snr >= 2.0) {
+    badge.innerText = "VIABLE (3GPP COMPLIANT)";
+    badge.className = "status-badge viable";
+  } else {
+    badge.innerText = "OUT OF MARGIN (DEGRADED)";
+    badge.className = "status-badge unviable";
+  }
+
+  // Multi-RAT Handover state
+  const stateLabel = document.getElementById("handoverState");
+  if (isEmergency) {
+    stateLabel.innerText = "FAILOVER_EMERGENCY (SOS ACTIVE)";
+    stateLabel.style.color = "#ff0054";
+  } else if (tn_rsrp >= -105.0) {
+    stateLabel.innerText = "TERRESTRIAL_CONNECTED";
+    stateLabel.style.color = "#06d6a0";
+  } else if (tn_rsrp < -112.0 && snr >= 2.0 && elev >= 15.0) {
+    stateLabel.innerText = "LEO_CONNECTED (SATELLITE ACTIVE)";
+    stateLabel.style.color = "#48cae4";
+  } else {
+    stateLabel.innerText = "LEO_TRACKING";
+    stateLabel.style.color = "#ffd166";
+  }
+}
+
+// Initial calculation run
+updateSim();
+</script>
+
+</body>
+</html>
