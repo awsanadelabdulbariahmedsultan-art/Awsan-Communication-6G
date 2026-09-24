@@ -21,11 +21,12 @@
 
 ---
 
-
 # Awsan-Communication-6G
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
-![Version](https://img.shields.io/badge/Release-v1.5.0.1-green.svg)
+<!-- Official DOI & Release Badges -->
+[![DOI: v1.5.0.0](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
+[![DOI: v0.1.5](https://zenodo.org/badge/DOI/10.5281/zenodo.22942244.svg)](https://doi.org/10.5281/zenodo.22942244)
+![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.5.0.1-green.svg)
 ![Edition](https://img.shields.io/badge/Edition-Complete%20Experimental%20Edition-blue.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
@@ -33,10 +34,20 @@
 
 ## 📋 Engineering Metadata & Specification
 * **Standard Specification:** RFC-AWSAN-6G-NTN-0001
-* **Edition:** Complete Experimental Edition (إصدار تجريبي مكتمل)
+* **Edition:** Complete Experimental Edition
 * **Chief Systems Engineer:** Eng. Awsan Adel Abdulbari Ahmed Sultan
 * **National ID:** 01010305468 | **Country:** YEMEN | **Contact:** +967 777852433
 * **Certification:** Expert-Level Network Configuration, 6G Architecture & NTN Space-Ground Integration
+
+---
+
+## 🔖 Version Lineage & Permanent DOI Records
+
+| Release Tag | Specification Level & Status | DOI Identifier / Permanent Record |
+| :--- | :--- | :--- |
+| **v1.5.0.1** | Latest Active Release (GitHub Production Core) | [GitHub Release v1.5.0.1](https://github.com/awsanadelabdulbariahmedsultan-art/Awsan-Communication-6G/releases/tag/v1.5.0.1) |
+| **v1.5.0.0** | Complete Experimental Edition (Archived Master Specification) | [`10.5281/zenodo.22941921`](https://doi.org/10.5281/zenodo.22941921) |
+| **v0.1.5** | Initial Core Prototype (Foundational Proof-of-Concept) | [`10.5281/zenodo.22942244`](https://doi.org/10.5281/zenodo.22942244) |
 
 ---
 
@@ -72,21 +83,40 @@ http://localhost:8080
 
 ## 📖 Citation
 
-### Textual Citation
-> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v1.5.0.1). Zenodo. https://doi.org/10.5281/zenodo.22941921
+### 1. Primary Citation (Complete Specification Edition):
+> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v1.5.0.0). Zenodo. https://doi.org/10.5281/zenodo.22941921
 
-### BibTeX
 ```bibtex
-@misc{sultan2026awsan6g,
+@misc{sultan2026awsan6g_core,
   author       = {Eng. Awsan Adel Abdulbari Ahmed Sultan},
   title        = {Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification},
   year         = {2026},
-  version      = {v1.5.0.1},
+  version      = {v1.5.0.0},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.22941921},
   url          = {[https://doi.org/10.5281/zenodo.22941921](https://doi.org/10.5281/zenodo.22941921)}
 }
 ```
+
+### 2. Prototype Citation (Baseline Prototype Edition):
+> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v0.1.5). Zenodo. https://doi.org/10.5281/zenodo.22942244
+
+```bibtex
+@misc{sultan2026awsan6g_prototype,
+  author       = {Eng. Awsan Adel Abdulbari Ahmed Sultan},
+  title        = {Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification (v0.1.5)},
+  year         = {2026},
+  version      = {v0.1.5},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22942244},
+  url          = {[https://doi.org/10.5281/zenodo.22942244](https://doi.org/10.5281/zenodo.22942244)}
+}
+```
+
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full copyright terms and conditions.
 
 ---
 
@@ -344,26 +374,36 @@ The **Awsan-6G-NTN** architecture natively supports the six transformative pilla
   <img src="./AWSAN COMMUNICATION 6G.png" alt="AWSAN COMMUNICATION 6G" width="1254" height="1254"/>
 </p>
 
+---# منظومة الاتصالات الفضائية والأرضية | Awsan-Communication-6G
+
+<!-- الشارات الرسمية للتوثيق والإصدارات -->
+[![DOI: v1.5.0.0](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
+[![DOI: v0.1.5](https://zenodo.org/badge/DOI/10.5281/zenodo.22942244.svg)](https://doi.org/10.5281/zenodo.22942244)
+![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.5.0.1-green.svg)
+![Edition](https://img.shields.io/badge/Edition-Complete%20Experimental%20Edition-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 ---
-# منظومة الاتصالات الفضائية والأرضية | Awsan-Communication-6G
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
-![Version](https://img.shields.io/badge/الإصدار-v1.5.0.1-green.svg)
-![Edition](https://img.shields.io/badge/النسخة-إصدار%20تجريبي%20مكتمل-blue.svg)
-![License](https://img.shields.io/badge/الترخيص-MIT-yellow.svg)
-
----
-
-## 📋 البيانات التعريفية والمواصفات الهندسية
+## 📋 البيانات التعريفية والمواصفات الهندسية (Metadata & Authorship)
 * **المواصفة القياسية:** RFC-AWSAN-6G-NTN-0001
-* **نوع الإصدار:** Complete Experimental Edition (إصدار تجريبي مكتمل)
 * **مهندس النظم الرئيسي:** Eng. Awsan Adel Abdulbari Ahmed Sultan
 * **الرقم الوطني:** 01010305468 | **الدولة:** الجمهورية اليمنية (YEMEN) | **رقم التواصل:** 00967777852433
 * **الاعتماد الفني:** خبير معتمد في إعداد الشبكات، معمارية الجيل السادس (6G Architecture)، والتكامل الفضائي-الأرضي (NTN Space-Ground Integration)
 
 ---
 
-## 🚀 المعالم التقنية البارزة للإصدار (v1.5.0.1)
+## 🔖 سجل الإصدارات وتوثيق الـ DOI الدولي (Version Lineage)
+
+| الإصدار (Release) | نوع النسخة وحالتها (Type & Status) | معرف الـ DOI / رابط التوثيق |
+| :--- | :--- | :--- |
+| **v1.5.0.1** | Latest Active Release (الإصدار الأساسي المعتمد في GitHub) | [GitHub Release v1.5.0.1](https://github.com/awsanadelabdulbariahmedsultan-art/Awsan-Communication-6G/releases/tag/v1.5.0.1) |
+| **v1.5.0.0** | Complete Experimental Edition (المواصفة الكاملة المؤرشفة) | [`10.5281/zenodo.22941921`](https://doi.org/10.5281/zenodo.22941921) |
+| **v0.1.5** | Initial Core Prototype (النموذج الأولي التأسيسي) | [`10.5281/zenodo.22942244`](https://doi.org/10.5281/zenodo.22942244) |
+
+---
+
+## 🚀 المعالم التقنية البارزة للإصدار (Key Milestones)
 - **نماذج الانتشار الفيزيائي:** دمج نماذج الانتشار لنطاق S-Band وفق معايير 3GPP Rel-18 الفيزيائية (FSPL, KTB, SNR).
 - **الديناميكا المدارية:** نظام تعويض مسبق لتأثير دوبلر المداري عالي السرعة (~7.5 كم/ثانية).
 - **إدارة الشبكات والانتقال:** آلة حالات تنبؤية للتحويل بين الشبكات المتعددة (Multi-RAT) مع أسبقية قصوى لاتصالات الطوارئ الاستباقية (Emergency SOS).
@@ -395,26 +435,40 @@ http://localhost:8080
 
 ## 📖 الاستشهاد الأكاديمي الدولي (Citation)
 
-### صيغة الاستشهاد النصي:
-> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v1.5.0.1). Zenodo. https://doi.org/10.5281/zenodo.22941921
+### 1. الاستشهاد بالمواصفة الكاملة (Complete Edition):
+> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v1.5.0.0). Zenodo. https://doi.org/10.5281/zenodo.22941921
 
-### صيغة BibTeX للباحثين والمجلات العلمية:
 ```bibtex
-@misc{sultan2026awsan6g,
+@misc{sultan2026awsan6g_core,
   author       = {Eng. Awsan Adel Abdulbari Ahmed Sultan},
   title        = {Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification},
   year         = {2026},
-  version      = {v1.5.0.1},
+  version      = {v1.5.0.0},
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.22941921},
   url          = {[https://doi.org/10.5281/zenodo.22941921](https://doi.org/10.5281/zenodo.22941921)}
 }
 ```
 
+### 2. الاستشهاد بالنموذج الأولي التأسيسي (Baseline Prototype):
+> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v0.1.5). Zenodo. https://doi.org/10.5281/zenodo.22942244
+
+```bibtex
+@misc{sultan2026awsan6g_prototype,
+  author       = {Eng. Awsan Adel Abdulbari Ahmed Sultan},
+  title        = {Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification (v0.1.5)},
+  year         = {2026},
+  version      = {v0.1.5},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22942244},
+  url          = {[https://doi.org/10.5281/zenodo.22942244](https://doi.org/10.5281/zenodo.22942244)}
+}
+```
+
 ---
 
 ## 📜 الترخيص القانوني (License)
-هذا المشروع مرخص بموجب **رخصة MIT** القياسية مع الاحتفاظ بحقوق الملكية الفكرية - للمزيد من التفاصيل يُرجى الاطلاع على ملف [LICENSE](LICENSE).
+هذا المشروع مرخص بموجب **رخصة MIT** القياسية مع الاحتفاظ بحقوق الملكية الفكرية والسيادية - للمزيد من التفاصيل يُرجى مراجعة ملف [LICENSE](LICENSE).
 
 ---
 
