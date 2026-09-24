@@ -73,6 +73,80 @@ graph TD
     
 ---
 
+# Awsan-Communication-6G
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22941921.svg)](https://doi.org/10.5281/zenodo.22941921)
+![Version](https://img.shields.io/badge/Release-v1.5.0.1-green.svg)
+![Edition](https://img.shields.io/badge/Edition-Complete%20Experimental%20Edition-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+---
+
+## 📋 Engineering Metadata & Specification
+* **Standard Specification:** RFC-AWSAN-6G-NTN-0001
+* **Edition:** Complete Experimental Edition (إصدار تجريبي مكتمل)
+* **Chief Systems Engineer:** Eng. Awsan Adel Abdulbari Ahmed Sultan
+* **National ID:** 01010305468 | **Country:** YEMEN | **Contact:** +967 777852433
+* **Certification:** Expert-Level Network Configuration, 6G Architecture & NTN Space-Ground Integration
+
+---
+
+## 🚀 Key Release Milestones
+- **Physical Propagation Models:** Integrated 3GPP Rel-18 S-Band physical propagation models (FSPL, KTB, SNR).
+- **Orbital Dynamics:** High-velocity orbital Doppler frequency pre-compensation (~7.5 km/s).
+- **Network Handover:** Multi-RAT predictive handover state machine with Emergency SOS preemption.
+- **Autonomous Core:** Embedded AI-Native Autonomous Protocol Self-Evolution & OTA update daemon.
+- **Security & Governance:** Master Author Root of Trust cryptographic governance.
+- **Continuous Integration:** Multi-stack automated CI/CD pipeline and verified test suites.
+
+
+---
+
+## 🐳 Quick Start & Deployment
+
+### Build and Run with Docker
+```bash
+# 1. Build the container image
+docker build -t awsanadelabdulbariahmedsultan-art/awsan-6g-ntn .
+
+# 2. Run the container instance
+docker run -d -p 8080:8080 --name awsan-6g awsanadelabdulbariahmedsultan-art/awsan-6g-ntn
+```
+
+### Access Application
+Once running, navigate to:
+```text
+http://localhost:8080
+```
+
+---
+
+## 📖 Citation
+
+### Textual Citation
+> Sultan, E. A. A. A. (2026). *Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification* (v1.5.0.1). Zenodo. https://doi.org/10.5281/zenodo.22941921
+
+### BibTeX
+```bibtex
+@misc{sultan2026awsan6g,
+  author       = {Eng. Awsan Adel Abdulbari Ahmed Sultan},
+  title        = {Awsan-6G-NTN: Unified Space-Air-Ground Direct-to-Device Protocol Specification},
+  year         = {2026},
+  version      = {v1.5.0.1},
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.22941921},
+  url          = {[https://doi.org/10.5281/zenodo.22941921](https://doi.org/10.5281/zenodo.22941921)}
+}
+```
+
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for full copyright and terms of use.
+
+
+---
+
 ## 🔬 2. Four Core NTN Physical & Engineering Challenges
 
 Based on the physical and standard considerations of 6G NTN, the project incorporates computational models resolving the four primary direct-to-cell bottlenecks:
